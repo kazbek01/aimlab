@@ -1,0 +1,40 @@
+.add-label {
+    color: #FE1018; text-decoration: underline; font-weight: 500
+}
+.select2-container {
+    width: 100% !important;
+}
+.list-item {
+    border: 1px dotted black; padding: 20px;margin-bottom: 20px;
+}
+.delete-icon {
+    color: red; position: absolute; right: 8px; font-size: 22px; cursor: pointer;margin-top: -12px;
+}
+.form-group {
+    margin-bottom: 10px !important;
+}
+.icheck-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.icheck-list li label {
+    font-weight: 400 !important;
+}
+.icheck-list {
+    float: none;
+}
+.mt-20 {
+    margin-top: 20px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.select2-container .select2-selection--single {
+    height: 38px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-top: 3px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 6px;
+}

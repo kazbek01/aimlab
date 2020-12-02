@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin
+Disallow: /ajax
+Disallow: /cron
+
+Sitemap: https://www.ffin.ua/sitemap.xml
+
+User-agent: Yandex
+Disallow: /admin
+Disallow: /ajax
+Disallow: /cron
+
+Host: https://www.ffin.ua/

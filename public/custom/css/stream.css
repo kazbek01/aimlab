@@ -1,0 +1,346 @@
+.stream-item {
+    text-align: left;
+}
+.stream-item .text-success {
+    color: #238E27 !important;
+}
+.text-danger .span-online {
+    background-color: red !important;
+}
+.stream-item h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 16px;
+}
+.stream-item small {
+    display: inline-flex;
+    align-items: center;
+}
+.span-online {
+    border-radius: 50%;
+    background-color: #238E27;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    display: inline-block;
+}
+.stream-icon {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+.stream-icon a {
+    color: #026fff;
+}
+.conference-side-head p {
+    margin-bottom: 0px;
+    color: #5D5D5D;
+    font-weight: 500;
+}
+.conference-side-head {
+    margin-bottom: 20px !important;
+    padding: 10px !important;
+}
+.stream-item i {
+    margin-right: 4px;
+}
+.search-teacher-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5986FB), to(#2D4EF5));
+    background: -webkit-linear-gradient(top, #5986FB 0%, #2D4EF5 100%);
+    background: -o-linear-gradient(top, #5986FB 0%, #2D4EF5 100%);
+    background: linear-gradient(180deg, #5986FB 0%, #2D4EF5 100%);
+    -webkit-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.search-teacher .call-end {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.ellipse-border {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.ellipse-border-static {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 50px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.btn-power {
+    background: -webkit-gradient(linear, left top, left bottom, from(#5986FB), to(#2D4EF5));
+    background: -webkit-linear-gradient(top, #5986FB 0%, #2D4EF5 100%);
+    background: -o-linear-gradient(top, #5986FB 0%, #2D4EF5 100%);
+    background: linear-gradient(180deg, #5986FB 0%, #2D4EF5 100%);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    padding: 10px;
+}
+
+.btn-power span {
+    width: 100px;
+    height: 100px;
+    background: white;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    -webkit-box-shadow: 0px -4px 8px rgba(255, 255, 255, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px -4px 8px rgba(255, 255, 255, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(0, 0, 0, 0.03);
+}
+
+.btn-power:hover span, .btn-power:focus span {
+    -webkit-box-shadow: 0px -4px 8px rgba(255, 255, 255, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px -4px 8px rgba(255, 255, 255, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.btn-power.active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.conference-base {
+    background: #F5F5F5;
+    -webkit-border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
+    padding: 20px 30px 30px 30px;
+}
+
+.conference-base h4 {
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.3px;
+    color: #848E9F;
+    margin-bottom: 12px;
+}
+
+.conference-base-link {
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 8px 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.conference-base-link input {
+    padding: 0 20px 0 0;
+    margin: 0;
+    background: transparent;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #1D306D;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    border: none;
+}
+
+.conference-base-link input:disabled {
+    color: #C4C4C4;
+}
+
+.conference-base-link .btn-blue-gradient {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.conference-base-onboard {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    position: absolute;
+    padding: 10px;
+    z-index: 999;
+    width: 100%;
+}
+
+.conference-base-onboard h4 {
+    display: none;
+}
+
+.power-span {
+    font-family: "SF Pro Display Bold";
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 63%;
+    z-index: 1;
+}
+
+.conference-video {
+    height: 555px;
+}
+
+.conference-video img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.conference-side-head {
+    background: #F5F5F5;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center !important;
+}
+
+.conference-side-head .btn-plain {
+    max-height: 18px;
+    padding: 0;
+}
+
+.conference-side-head input {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 15px;
+    font-size: 20px;
+    line-height: 100%;
+    color: #222;
+}
+
+.conference-side-head input::-webkit-input-placeholder {
+    color: #848E9F;
+}
+
+.conference-side-head input::-moz-placeholder {
+    color: #848E9F;
+}
+
+.conference-side-head input:-ms-input-placeholder {
+    color: #848E9F;
+}
+
+.conference-side-head input::-ms-input-placeholder {
+    color: #848E9F;
+}
+
+.conference-side-head input::placeholder {
+    color: #848E9F;
+}
+
+.conference-side-body {
+    height: 388px;
+    overflow-y: scroll;
+    padding-right: 15px;
+}
+
+.conference-side-body::-webkit-scrollbar {
+    width: 2px;
+    background-color: #E5E5E5;
+}
+
+.conference-side-body::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 0 6px #848E9F;
+    background-color: #E5E5E5;
+}
+.conference-side-base .btn-primary {
+    width: 100%;
+    background-color: #4870F8;
+}
+.conference-side-base {
+    margin-top: 20px;
+}
+
+.conference-side-base .btn-plain {
+    width: 100%;
+}
+
+.conference-side-onboard {
+    position: absolute;
+    padding: 20px;
+    background: white;
+    z-index: 999;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+.grade-name {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
