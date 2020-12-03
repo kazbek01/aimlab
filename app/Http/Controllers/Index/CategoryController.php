@@ -23,22 +23,7 @@ class CategoryController extends Controller
 
     public function getProductsByCategory(Request $request,$id)
     {
-//        $category_products = Category::leftJoin('product_category','product_category.category_id', '=' , 'category.category_id')
-//            ->leftJoin('products','products.products_id', '=' , 'product_category.products_id')
-//            ->where('category.category_id',$id)
-//            ->select(
-//                'category.category_id',
-//                'category.category_name_ru',
-//                'category.category_icon',
-//                'category.category_image',
-//                'products.products.products_id',
-//                'products.products_name',
-//                'products.products_short_desc',
-//                'products.products_price',
-//                'products.products_image'
-//            )
-//            ->groupBy('category.category_id')
-//            ->orderBy('products.products_id','desc');
+
 
         $category_products = Products::leftJoin('product_category','product_category.products_id', '=' , 'products.products_id')
             ->leftJoin('category','category.category_id', '=' , 'product_category.category_id')

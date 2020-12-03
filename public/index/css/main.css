@@ -544,7 +544,21 @@ header {
 .dropdown-menu .dropdown-item svg + span {
   margin-left: 10px;
 }
-
+.dropdown-menu .dropdown-item svg{
+  width: 24px;
+  height: 24px;
+}
+.dropdown-menu .dropdown-item img{
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.dropdown-menu .dropdown-item .arrow-right{
+  width: 8px;
+  height: 14px;
+}
 .dropdown-menu .dropdown-item.active, .dropdown-menu .dropdown-item:active {
   background: transparent;
   color: #324F0F;

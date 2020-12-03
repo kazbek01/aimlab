@@ -1,4 +1,3 @@
-
 <section class="panel">
     <div class="container">
         <div class="row">
@@ -21,7 +20,11 @@
                             @if(count($categories['subcategories'][$item->category_id]) == 0)
                                 <li>
                                     <a class="dropdown-item" href="/category/{{ $item->category_id }}">
-                                        {{--                                        {!! $item->category_icon !!}--}}
+                                        @if(!empty($item->category_image))
+                                            <img src="{{ $item->category_image }}" alt="">
+                                        @else
+                                            {!! $item->category_icon !!}
+                                        @endif
                                         <span>{{ $item->category_name_ru }}</span>
                                     </a>
 
@@ -29,7 +32,11 @@
                             @else
                                 <li class="dropdown-submenu dropright">
                                     <a tabindex="-1" class="dropdown-item dropdown-toggle" data-toggle="dropdown">
-                                        {{--                                        {!! $item->category_icon !!}--}}
+                                        @if(!empty($item->category_image))
+                                            <img src="{{ $item->category_image }}" alt="">
+                                        @else
+                                            {!! $item->category_icon !!}
+                                        @endif
                                         <span>{{ $item->category_name_ru }}</span>
                                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
                                              xmlns="http://www.w3.org/2000/svg"
