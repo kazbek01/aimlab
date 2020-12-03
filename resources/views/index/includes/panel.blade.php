@@ -14,7 +14,6 @@
 
                         <?php
                         $categories = \App\Models\Category::getCategories();
-
                         ?>
                         @foreach($categories['categories'] as $item)
                             @if(count($categories['subcategories'][$item->category_id]) == 0)
