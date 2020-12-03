@@ -73,6 +73,8 @@ class ProductsController extends Controller
             ]);
         }
 
+//        dd($request->category_list);
+
         $products = new Products();
         $products->products_name = $request->products_name;
         $products->products_short_desc = $request->products_short_desc;
@@ -180,6 +182,8 @@ class ProductsController extends Controller
 //            }
 //
 //        }
+
+        ProductCategory::where('products_id',$products->products_id)->delete();
 
         if(isset($request->category_list)){
             foreach($request->category_list as $val){

@@ -3,37 +3,11 @@
 @section('content')
 
     <div class="container-fluid">
-        <div class="row page-titles">
-            <div class="col-md-8 col-8 align-self-center">
-                <h3 class="text-themecolor m-b-0 m-t-0 d-inline-block menu-tab">
-                    <a href="/admin/order" class="@if(!isset($request->active) || $request->active == '1') active-page @endif">Опубликованные проекты</a>
-                </h3>
-                <h3 class="text-themecolor m-b-0 m-t-0 d-inline-block menu-tab second-tab" >
-                    <a href="/admin/order?active=0" class="@if($request->active == '0') active-page @endif">Неопубликованные</a>
-                </h3>
-                <div class="clear-float"></div>
-            </div>
-            <div class="col-md-4 col-4 align-self-center text-right">
-                <a href="/admin/order/create" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Добавить</a>
-            </div>
-        </div>
+
 
         <div class="row white-bg">
             <div style="text-align: left" class="form-group col-md-6" >
 
-                @if($request->active == '0')
-
-                    <h4 class="box-title box-edit-click">
-                        <a href="javascript:void(0)" onclick="isShowEnabledAll('order')">Опубликовать отмеченные</a>
-                    </h4>
-
-                @else
-
-                    <h4 class="box-title box-edit-click">
-                        <a href="javascript:void(0)" onclick="isShowDisabledAll('order')">Неопубликовать отмеченные</a>
-                    </h4>
-
-                @endif
 
             </div>
             <div style="text-align: right" class="form-group col-md-6" >
@@ -53,7 +27,6 @@
                             <th>Описание</th>
                             <th>Дата</th>
                             <th style="width: 15px"></th>
-                            <th style="width: 15px"></th>
                             <th class="no-sort" style="width: 0px; text-align: center; padding-right: 16px; padding-left: 14px;" >
                                 <input onclick="selectAllCheckbox(this)" style="font-size: 15px" type="checkbox" value="1"/>
                             </th>
@@ -68,23 +41,22 @@
                             <td></td>
                             <td>
                                 <form>
-                                     <input value="{{$request->order_title}}" type="text" class="form-control" name="order_title" placeholder="">
+                                     <input value="{{$request->user_name}}" type="text" class="form-control" name="user_name" placeholder="">
                                      <input type="hidden" value="@if(!isset($request->active)){{'1'}}@else{{$request->active}}@endif" name="active"/>
                                 </form>
                             </td>
                             <td>
                                 <form>
-                                    <input value="{{$request->order_title}}" type="hidden" class="form-control" name="order_title" placeholder="">
+                                    <input value="{{$request->user_email}}" type="hidden" class="form-control" name="user_email" placeholder="">
                                     <input type="hidden" value="@if(!isset($request->active)){{'1'}}@else{{$request->active}}@endif" name="active"/>
                                 </form>
                             </td>
                             <td>
                                 <form>
-                                    <input value="{{$request->order_title}}" type="hidden" class="form-control" name="order_title" placeholder="">
+                                    <input value="{{$request->order_text}}" type="hidden" class="form-control" name="order_text" placeholder="">
                                     <input type="hidden" value="@if(!isset($request->active)){{'1'}}@else{{$request->active}}@endif" name="active"/>
                                 </form>
                             </td>
-                            <td></td>
                             <td></td>
                         </tr>
 
@@ -93,30 +65,21 @@
                             <tr>
                                 <td> {{ $key + 1 }}</td>
                                 <td>
-                                    <div class="object-image">
-                                        <a class="fancybox" href="{{$val->order_image}}">
-                                            <img src="{{$val->order_image}}">
-                                        </a>
-                                    </div>
-                                    <div class="clear-float"></div>
+                                    {{ $val['user_name']}}
                                 </td>
                                 <td>
-                                    {{ $val['order_title']}}
+                                    {{ $val['user_email']}}
                                 </td>
                                 <td>
-                                    {{ $val['order_desc']}}
+                                    {{ $val['order_text']}}
                                 </td>
                                 <td>
-                                    {{\App\Http\Helpers::getDateFormat($val['created_at'])}}
+{{--                                    {{\App\Http\Helpers::getDateFormat($val['created_at'])}}--}}
+                                    {{ $val['date']}}
                                 </td>
                                 <td style="text-align: center">
                                     <a href="javascript:void(0)" onclick="delItem(this,'{{ $val->order_id }}','order')">
                                         <i class="mdi mdi-delete" style="font-size: 20px; color: red;"></i>
-                                    </a>
-                                </td>
-                                <td style="text-align: center">
-                                    <a href="/admin/order/{{ $val->order_id }}/edit">
-                                        <i class="mdi mdi-grease-pencil" style="font-size: 20px;"></i>
                                     </a>
                                 </td>
                                 <td style="text-align: center;">

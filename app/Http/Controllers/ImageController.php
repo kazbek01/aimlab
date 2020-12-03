@@ -119,7 +119,7 @@ class ImageController extends Controller
             $result['success'] = false;
             return $result;
         }
-        else if($file->getClientSize() > 2097152){
+        else if($file->getClientSize() > 5097152){
             $result['error'] = 'Максимальный размер загружаемого файла ~ 2 МБ';
             $result['success'] = false;
             return $result;

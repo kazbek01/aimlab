@@ -103,15 +103,21 @@
                                     {!! $val['products_desc'] !!}
                                 </td>
                                 <td>
-                                    <?php $product_category = \App\Models\ProductCategory::LeftJoin('category','category.category_id','=','product_category.category_id')
-                                        ->select('category.*')
+                                    <?php
+
+                                    $product_category = \App\Models\ProductCategory::LeftJoin('category','category.category_id','=','product_category.category_id')
+                                        ->select(
+                                            'category.category_name_ru'
+                                        )
                                         ->where('products_id','=', $val->products_id)
                                         ->groupBy('category.category_id')
-                                        ->get(); ?>
+                                        ->get();
+
+                                    ?>
 
                                     <ul style="list-style: none">
                                         @foreach($product_category as $key =>$value)
-                                                <li>{{$value->category_name_ru}}</li>
+                                                <li>{{$value->category_name_ru}} {{$value->category_id}}</li>
                                         @endforeach
 
                                     </ul>
