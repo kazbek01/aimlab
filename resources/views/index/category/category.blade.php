@@ -14,8 +14,12 @@
     <section class="catalog">
         <div class="container">
             <h1 class="title-lg">
-                <span>{{ $category_products->category_name_ru }}</span>
-              {!! $category_products->category_icon !!}
+                <span>{{ $category->category_name_ru }}</span>
+                @if(!empty($category->category_image))
+                    <img src="{{ $category->category_image }}" alt="">
+                @else
+                    {!! $category->category_icon !!}
+                @endif
             </h1>
 
             <div class="row row-eq-height">
@@ -28,11 +32,8 @@
                                 </div>
                                 <div class="productItem-caption">
                                     <h3>{{ $item->products_name }}</h3>
-                                    <ul>
-                                        <li>600 x 400 x 152 мм</li>
-                                        <li>27 л</li>
-                                    </ul>
-                                    <p>от 250 тенге</p>
+                                    {{ $item->products_short_desc }}
+                                    <p>от {{ $item->products_price }} тенге</p>
                                 </div>
                             </div>
                         </a>

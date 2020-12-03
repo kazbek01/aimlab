@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=1">
-    <title>Daryn.online</title>
+{{--    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=1">--}}
+    <title>Aimlab</title>
 
     <link href="/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/admin/css/style.css" rel="stylesheet">

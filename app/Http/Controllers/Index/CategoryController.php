@@ -23,7 +23,13 @@ class CategoryController extends Controller
 
     public function getProductsByCategory(Request $request,$id)
     {
-
+        $category = Category::where('category_id', $id)
+            ->select(
+                'category_id',
+                'category_name_ru',
+                'category_icon',
+                'category_image'
+            )->first();
 
         $category_products = Products::leftJoin('product_category','product_category.products_id', '=' , 'products.products_id')
             ->leftJoin('category','category.category_id', '=' , 'product_category.category_id')
@@ -48,7 +54,8 @@ class CategoryController extends Controller
 
         return view('index.category.category',
             [
-                'category_products' => $category_products
+                'category_products' => $category_products,
+                'category' => $category
             ]);
     }
 
