@@ -20,7 +20,7 @@ class Category extends Model
 
         $categories = Category::where('is_show', '1')
                 ->where('parent_id', 0)
-                ->orWhere('parent_id', null)
+                ->orWhereNull('parent_id')
                 ->select(
                     'category_name_ru',
                     'category_id',

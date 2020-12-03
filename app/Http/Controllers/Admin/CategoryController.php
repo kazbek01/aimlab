@@ -36,7 +36,7 @@ class CategoryController extends Controller
         if(isset($request->parent_id))
             $row->where('parent_id',$request->parent_id);
         else
-            $row->where('parent_id',0);
+            $row->where('parent_id',0)->orWhereNull('parent_id');
         
         $row = $row->paginate(20);
 
