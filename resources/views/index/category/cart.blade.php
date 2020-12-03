@@ -1,12 +1,12 @@
 @extends('index.layout.layout')
 
-@section('meta-tags')
+{{--@section('meta-tags')--}}
 
-    <title>{{$menu['menu_meta_title_'.$lang]}}</title>
-    <meta name="description" content="{{$menu['menu_meta_description_'.$lang]}}"/>
-    <meta name="keywords" content="{{$menu['menu_meta_keywords_'.$lang]}}"/>
+{{--    <title>{{$menu['menu_meta_title_'.$lang]}}</title>--}}
+{{--    <meta name="description" content="{{$menu['menu_meta_description_'.$lang]}}"/>--}}
+{{--    <meta name="keywords" content="{{$menu['menu_meta_keywords_'.$lang]}}"/>--}}
 
-@endsection
+{{--@endsection--}}
 
 
 @section('content')
