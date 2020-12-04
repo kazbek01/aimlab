@@ -28,7 +28,7 @@ class OrderController extends Controller
         View::share('menu', 'order');
 
 //        $products = Products::orderBy('products_name','asc')->select('products_id','products_name')->get();
-        View::share('products', $products);
+//        View::share('products', $products);
     }
 
     public function index(Request $request)
