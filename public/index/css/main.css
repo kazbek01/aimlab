@@ -1701,8 +1701,14 @@ article p + p {
   overflow: hidden;
   height: 360px;
 }
+.wrapper{
+  min-height: 80vh;
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .wrapper{
+    min-height: auto;
+  }
   .header {
     display: block;
   }
@@ -1881,6 +1887,9 @@ article p + p {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .wrapper{
+    min-height: auto;
+  }
   .header {
     display: block;
   }

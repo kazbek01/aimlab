@@ -10,7 +10,9 @@
 
 @include('index.includes.panel')
 
-@yield('content')
+<div class="wrapper">
+    @yield('content')
+</div>
 
 @include('index.layout.footer')
 

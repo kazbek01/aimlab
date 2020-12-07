@@ -10,6 +10,7 @@
                     </button>
                     <ul class="main-nav">
                         <li><a href="/" class="@if(isset($menu) && $menu == 'index') active @endif">Главная</a></li>
+                        <li><a href="/about" class="@if(isset($menu) && $menu == 'about') active @endif">О компании</a></li>
                         <li><a href="/project" class="@if(isset($menu) && $menu == 'project') active @endif">Наши проекты</a></li>
                         <li><a href="/service" class="@if(isset($menu) && $menu == 'service') active @endif">Услуги</a></li>
                         <li><a href="/news" class="@if(isset($menu) && $menu == 'news') active @endif">Новости</a></li>

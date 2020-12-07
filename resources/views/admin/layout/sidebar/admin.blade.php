@@ -53,6 +53,11 @@
           </a>
         </li>
         <li>
+          <a class="@if(isset($menu) && $menu == 'about') active @endif" href="/admin/about" >
+            <i class="mdi mdi-image"></i><span class="hide-video">О компании</span>
+          </a>
+        </li>
+        <li>
           <a class="@if(isset($menu) && $menu == 'password') active @endif" href="/admin/password" >
             <i class="mdi mdi-settings"></i><span class="hide-menu">{!!Lang::get('app.change_password')!!}</span>
           </a>

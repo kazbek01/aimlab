@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- Favicon icon -->
-{{--  <link rel="icon" href="/favicon.png">--}}
+  <link rel="icon" href="/favicon.png">
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
   

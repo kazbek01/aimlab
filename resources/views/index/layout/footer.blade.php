@@ -13,7 +13,7 @@
             <div class="col-xl-4 col-lg-4 offset-lg-1 col-md-5 col-height">
                 <ul class="footer-nav">
                     <li><a href="/">Главная</a></li>
-                    <li><a href="/">Партнеры</a></li>
+                    <li><a href="/about">О компании</a></li>
                     <li><a href="/service">Услуги</a></li>
                     <li><a href="/project">Проекты</a></li>
                     <li><a href="/contact">Контакты</a></li>

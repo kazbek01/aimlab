@@ -45,6 +45,8 @@ Route::group([
 
     Route::post('order/is_show', 'OrderController@changeIsShow');
     Route::resource('order', 'OrderController');
+
+    Route::resource('about', 'AboutController');
 });
 
 
@@ -74,6 +76,8 @@ Route::group([
     Route::get('cron/cache', 'CronController@clearCache');
 
     Route::get('search', 'IndexController@search');
+
+    Route::get('about', 'AboutController@show');
 });
 
 Route::post('image/upload', 'ImageController@uploadImage');

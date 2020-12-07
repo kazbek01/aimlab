@@ -125,7 +125,7 @@
                 // Порядок по умолчанию: «широта, долгота».
                 // Чтобы не определять координаты центра карты вручную,
                 // воспользуйтесь инструментом Определение координат.
-                center: [43.270112, 76.935233],
+                center: [43.252294, 76.928541],
                 controls: ['zoomControl', 'geolocationControl'],
                 // Уровень масштабирования. Допустимые значения:
                 // от 0 (весь мир) до 19.
@@ -180,9 +180,9 @@
             myMap.geoObjects
                 .add(myGeoObject)
                 .add(myPieChart)
-                .add(new ymaps.Placemark([43.270112, 76.935233], {
+                .add(new ymaps.Placemark([43.252294, 76.928541], {
                     balloonContent: 'цвет <strong>носика Гены</strong>',
-                    iconCaption: 'проспект Райымбека д. 165'
+                    iconCaption: 'Толе би 96А'
                 }, {
                     preset: 'islands#greenDotIconWithCaption'
                 }));
