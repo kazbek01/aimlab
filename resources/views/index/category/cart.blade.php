@@ -47,7 +47,7 @@
                         @endif
 
                         <li>
-                            <a href="#" class="btn-green-light">Купить</a>
+                            <a href="https://wa.me/8 (707) 522 44 88" class="btn-green-light">Купить</a>
                         </li>
                     </ul>
                 </div>
