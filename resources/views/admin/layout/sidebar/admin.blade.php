@@ -58,6 +58,31 @@
           </a>
         </li>
         <li>
+          <a class="@if(isset($menu) && $menu == 'partner') active @endif" href="/admin/partner" >
+            <i class="mdi mdi-image"></i><span class="hide-video">Партнеры</span>
+          </a>
+        </li>
+        <li>
+          <a class="@if(isset($menu) && $menu == 'order_info') active @endif" href="/admin/order_info" >
+            <i class="mdi mdi-image"></i><span class="hide-video">Как заказать?</span>
+          </a>
+        </li>
+        <li>
+          <a class="@if(isset($menu) && $menu == 'delivery') active @endif" href="/admin/delivery" >
+            <i class="mdi mdi-image"></i><span class="hide-video">Условия доставки</span>
+          </a>
+        </li>
+        <li>
+          <a class="@if(isset($menu) && $menu == 'payment') active @endif" href="/admin/payment" >
+            <i class="mdi mdi-image"></i><span class="hide-video">Способы оплаты</span>
+          </a>
+        </li>
+        <li>
+          <a class="@if(isset($menu) && $menu == 'contact') active @endif" href="/admin/contact" >
+            <i class="mdi mdi-image"></i><span class="hide-video">Контакты</span>
+          </a>
+        </li>
+        <li>
           <a class="@if(isset($menu) && $menu == 'password') active @endif" href="/admin/password" >
             <i class="mdi mdi-settings"></i><span class="hide-menu">{!!Lang::get('app.change_password')!!}</span>
           </a>

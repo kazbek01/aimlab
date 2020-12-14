@@ -28,21 +28,24 @@
                     <h3>{{ $products->products_name }}</h3>
                     {!! $products->products_desc !!}
                     <div class="notice">
-                        <p>При заказе от 300 000 тенге. Действуют <a href="#">индивидуальные объемные и отраслевые скидки.</a></p>
+                        <p>{{ $products->products_spec_offer }}</p>
                     </div>
                     <ul class="control-list">
                         <li>
                             <div class="control-item">
                                 <p>{{ $products->products_price }} тенге</p>
-                                <span>до 100 000 тенге</span>
+                                <span>{{ $products->price_detail_first }}</span>
                             </div>
                         </li>
-                        <li>
-                            <div class="control-item">
-                                <p>1700 тенге</p>
-                                <span>до 1 500 000 тенге</span>
-                            </div>
-                        </li>
+                        @if(!empty($products->products_price_second))
+                            <li>
+                                <div class="control-item">
+                                    <p>{{ $products->products_price_second }} тенге</p>
+                                    <span>{{ $products->price_detail_second }}</span>
+                                </div>
+                            </li>
+                        @endif
+
                         <li>
                             <a href="#" class="btn-green-light">Купить</a>
                         </li>

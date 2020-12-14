@@ -50,6 +50,10 @@
                                                 <textarea  class="form-control ckeditor" name="products_desc">{{ $row->products_desc }}</textarea>
                                             </div>
                                             <div class="form-group">
+                                                <label>Специальные  уведомления (Скидки,акции)</label>
+                                                <textarea  class="form-control" name="products_spec_offer">{{ $row->products_spec_offer }}</textarea>
+                                            </div>
+                                            <div class="form-group">
                                                 <label>Категория товара</label>
                                                 @include('admin.products.category-list')
                                             </div>
@@ -69,8 +73,39 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Цена</label>
-                                                <input value="{{ $row->products_price }}" type="text" class="form-control" name="products_price" placeholder="">
+                                                <label>Добавить в специальные предложения</label>
+                                                <div class="form-flex">
+                                                    <label class="radio-container">
+                                                        Да
+                                                        <input type="radio" name="is_offer" @if ($row->is_offer == 1 ) checked @endif value="1" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="radio-container">
+                                                        Нет
+                                                        <input type="radio" name="is_offer" @if ($row->is_offer == 0 ) checked @endif value="0">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="card-block">
+                                                <div class="form-group">
+                                                    <label>Цена 1</label>
+                                                    <input value="{{ $row->products_price }}" type="text" class="form-control" name="products_price" placeholder="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Детали цены 1</label>
+                                                    <textarea  class="form-control" name="price_detail_first">{{ $row->price_detail_first }}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="card-block">
+                                                <div class="form-group">
+                                                    <label>Цена 2</label>
+                                                    <input value="{{ $row->products_price_second }}" type="text" class="form-control" name="products_price_second" placeholder="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Детали цены 2</label>
+                                                    <textarea  class="form-control" name="price_detail_second">{{ $row->price_detail_second }}</textarea>
+                                                </div>
                                             </div>
                                             <div class="form-group">
                                                 <label>Старая цена</label>

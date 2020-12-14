@@ -79,10 +79,15 @@ class ProductsController extends Controller
         $products->products_name = $request->products_name;
         $products->products_short_desc = $request->products_short_desc;
         $products->products_desc = $request->products_desc;
+        $products->products_spec_offer = $request->products_spec_offer;
         $products->products_image= $request->products_image;
         $products->products_price = $request->products_price;
+        $products->products_price_second = $request->products_price_second;
         $products->products_price_old = $request->products_price_old;
+        $products->price_detail_first = $request->price_detail_first;
+        $products->price_detail_second = $request->price_detail_second;
         $products->is_show_main = $request->is_show_main;
+        $products->is_offer = $request->is_offer;
         $products->sort_num = $request->sort_num?:100;
         $products->save();
 
@@ -161,10 +166,16 @@ class ProductsController extends Controller
         $products->products_name = $request->products_name;
         $products->products_short_desc = $request->products_short_desc;
         $products->products_desc = $request->products_desc;
+        $products->products_spec_offer = $request->products_spec_offer;
         $products->products_image= $request->products_image;
         $products->products_price = $request->products_price;
+        $products->products_price_second = $request->products_price_second;
         $products->products_price_old = $request->products_price_old;
+        $products->price_detail_first = $request->price_detail_first;
+        $products->price_detail_second = $request->price_detail_second;
         $products->is_show_main = $request->is_show_main;
+        $products->is_offer = $request->is_offer;
+        $products->sort_num = $request->sort_num?:100;
         $products->sort_num = $request->sort_num?:100;
 
         $products->save();

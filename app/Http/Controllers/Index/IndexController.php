@@ -59,6 +59,7 @@ class IndexController extends Controller
             ->get();
 
         $products = Products::where('is_show', 1)
+            ->where('is_offer', 1)
             ->where('is_show_main', 1)
             ->select(
                 'products_id',
@@ -67,6 +68,7 @@ class IndexController extends Controller
                 'products_short_desc',
                 'products_price'
             )
+            ->orderBy('products.products_id','desc')
             ->take(4)
             ->get();
 

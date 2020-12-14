@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Index;
 
 use App\Http\Helpers;
+use App\Models\Contact;
 use App\Models\Menu;
 
 use App\Models\Order;
@@ -33,8 +34,20 @@ class OrderController extends Controller
     }
     public function index(Request $request)
     {
+        $contact = Contact::select(
+            'phone',
+            'whatsapp',
+            'email',
+            'fax'
+        )
+            ->orderBy('created_at', 'desc')
+            ->take(1)
+            ->get();
 
-        return  view('index.index.contact');
+        if ($contact == null) abort(404);
+
+
+        return  view('index.index.contact', ['contact'=>$contact]);
     }
 
     public function addOrder(Request $request)

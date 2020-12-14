@@ -32,8 +32,14 @@
                                 </div>
                                 <div class="productItem-caption">
                                     <h3>{{ $item->products_name }}</h3>
-                                    {{ $item->products_short_desc }}
-                                    <p>от {{ $item->products_price }} тенге</p>
+                                    <span class="span-block">
+                                        {{ $item->products_short_desc }}
+                                    </span>
+                                    <div class="price-cover">
+                                        <p>от {{ $item->products_price }} тенге</p>
+                                        <p class="throwLine">{{ $item->products_price_old }} тенге</p>
+                                    </div>
+
                                 </div>
                             </div>
                         </a>

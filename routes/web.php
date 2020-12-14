@@ -47,6 +47,16 @@ Route::group([
     Route::resource('order', 'OrderController');
 
     Route::resource('about', 'AboutController');
+
+    Route::resource('contact', 'ContactController');
+
+    Route::resource('partner', 'PartnerController');
+
+    Route::resource('order_info', 'OrderInfoController');
+
+    Route::resource('delivery', 'DeliveryController');
+
+    Route::resource('payment', 'PaymentController');
 });
 
 
@@ -71,6 +81,7 @@ Route::group([
     Route::post('order', 'OrderController@addOrder')->name('order');
 
     Route::get('category/{id}', 'CategoryController@getProductsByCategory');
+    Route::get('offers', 'ProductsController@getOffers');
     Route::get('products/{id}', 'ProductsController@show');
 
     Route::get('cron/cache', 'CronController@clearCache');
@@ -78,6 +89,15 @@ Route::group([
     Route::get('search', 'IndexController@search');
 
     Route::get('about', 'AboutController@show');
+
+    Route::get('order_info', 'OrderInfoController@show');
+
+    Route::get('delivery', 'DeliveryController@show');
+
+    Route::get('payment', 'PaymentController@show');
+
+    Route::get('partner', 'PartnerController@index');
+    Route::get('partner/{id}', 'PartnerController@show');
 });
 
 Route::post('image/upload', 'ImageController@uploadImage');

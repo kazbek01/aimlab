@@ -44,6 +44,7 @@ class CategoryController extends Controller
                 'products.products_name',
                 'products.products_short_desc',
                 'products.products_price',
+                'products.products_price_old',
                 'products.products_image'
             )
             ->groupBy('products.products_id')

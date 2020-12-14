@@ -1,3 +1,16 @@
+<?php
+
+$contact = \App\Models\Contact::select(
+    'phone',
+    'whatsapp',
+    'email',
+    'fax'
+)
+    ->orderBy('created_at', 'desc')
+    ->take(1)
+    ->get();
+?>
+
 <header>
     <div class="container">
         <div class="header">
@@ -29,21 +42,21 @@
             <div class="touch">
                 <ul class="contact-list">
                     <li>
-                        <a href="mailto:aimlabkz@gmail.com">
+                        <a href="mailto:{{ $contact[0]->email }}">
                             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.119 2.03674L8.813 7.57574C9.508 8.07599 10.442 8.077 11.138 7.57775L18.876 2.02265M2.636 1H17.363C18.267 1 19 1.7378 19 2.64771V13.3533C19 14.2632 18.267 15 17.364 15H2.636C1.733 15.001 1 14.2632 1 13.3533V2.64771C1 1.7378 1.733 1 2.636 1Z"
                                       stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>aimlabkz@gmail.com </span>
+                            <span>{{ $contact[0]->email }}</span>
                         </a>
                     </li>
                     <li>
-                        <a href="tel:+7 (727) 292 86 49">
+                        <a href="tel:{{ $contact[0]->phone }}">
                             <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.75 4H8.25M11 19H3C1.895 19 1 18.105 1 17V3C1 1.895 1.895 1 3 1H11C12.105 1 13 1.895 13 3V17C13 18.105 12.105 19 11 19ZM6.999 15.25C6.861 15.25 6.749 15.362 6.75 15.5C6.75 15.638 6.862 15.75 7 15.75C7.138 15.75 7.25 15.638 7.25 15.5C7.25 15.362 7.138 15.25 6.999 15.25Z"
                                       stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>8 (727) 292 86 49</span>
+                            <span>{{ $contact[0]->phone }}</span>
                         </a>
                     </li>
                     <li>
@@ -53,7 +66,7 @@
                                       stroke="#777777" stroke-miterlimit="10" stroke-linecap="round"
                                       stroke-linejoin="round"/>
                             </svg>
-                            <span>8 (727) 292 86 49</span>
+                            <span>{{ $contact[0]->fax }}</span>
                         </a>
                     </li>
                 </ul>

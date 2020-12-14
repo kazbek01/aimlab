@@ -34,7 +34,11 @@ class ProductsController extends Controller
                 'products.products_name',
                 'products.products_image',
                 'products.products_desc',
+                'products.products_spec_offer',
                 'products.products_price',
+                'products.products_price_second',
+                'products.price_detail_first',
+                'products.price_detail_second',
                 'category.category_id',
                 'category.category_name_ru'
             )
@@ -48,5 +52,27 @@ class ProductsController extends Controller
             ]);
     }
 
+    public function getOffers(Request $request)
+    {
+        $products = Products::where('is_show', 1)
+            ->where('is_offer', 1)
+            ->select(
+                'products_id',
+                'products_name',
+                'products_image',
+                'products_short_desc',
+                'products_price'
+            )
+            ->orderBy('products.products_id','desc');
+
+        $products = $products->paginate(12);
+
+
+
+        return view('index.offers.offers',
+            [
+                'products' => $products
+            ]);
+    }
 
 }
